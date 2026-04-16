@@ -1,0 +1,12 @@
+bundle:
+  name: dia-behavior
+  version: 1.0.0
+  description: Adds dia_generate_speech — podcast/dialogue TTS via nari-labs/Dia-1.6B-0626
+
+tools:
+  # Install: uv pip install -e ./modules/tool-dia
+  - module: tool-dia
+
+context:
+  include:
+    - omnivoice:context/dia.md

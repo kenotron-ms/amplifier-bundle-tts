@@ -1,0 +1,12 @@
+bundle:
+  name: gemini-tts-behavior
+  version: 1.0.0
+  description: Adds gemini_generate_speech — cloud TTS via Google Gemini API (requires GOOGLE_API_KEY)
+
+tools:
+  # Install: uv pip install -e ./modules/tool-gemini-tts
+  - module: tool-gemini-tts
+
+context:
+  include:
+    - omnivoice:context/gemini-tts.md

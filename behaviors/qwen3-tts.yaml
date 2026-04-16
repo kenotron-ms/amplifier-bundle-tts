@@ -1,0 +1,12 @@
+bundle:
+  name: qwen3-tts-behavior
+  version: 1.0.0
+  description: Adds qwen3_design_speech and qwen3_clone_speech via Qwen3-TTS (Alibaba)
+
+tools:
+  # Install: uv pip install -e ./modules/tool-qwen3-tts
+  - module: tool-qwen3-tts
+
+context:
+  include:
+    - omnivoice:context/qwen3-tts.md
