@@ -1,7 +1,11 @@
 bundle:
   name: gemini-tts-behavior
   version: 1.0.0
-  description: Adds gemini_generate_speech — cloud TTS via Google Gemini API (requires GOOGLE_API_KEY)
+  description: >
+    All-purpose cloud TTS — 30 expressive prebuilt voices covering every tone from
+    bright and upbeat to gravelly and warm. Instant generation, no GPU, no local model.
+    Best for: presentations, reading text aloud, demos, narration, notifications, and
+    any content where fast, flexible, high-quality speech matters more than custom voice control.
 
 tools:
   # Install: uv pip install -e ./modules/tool-gemini-tts

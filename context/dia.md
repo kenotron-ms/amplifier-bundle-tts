@@ -1,6 +1,9 @@
-# Dia TTS
+# Dia TTS — Multi-Speaker Podcast & Dialogue
 
-`dia_generate_speech` generates two-speaker podcast/dialogue audio using **nari-labs/Dia-1.6B-0626**.
+**Use this for:** podcast episodes, interviews, two-character scenes, explainer dialogue —
+any content that needs two naturalistic voices talking to each other.
+
+`dia_generate_speech` generates two-speaker audio in a single pass using **nari-labs/Dia-1.6B-0626**.
 Local inference — no API key, no server. Downloads ~3 GB from HuggingFace on first use.
 
 ## Tool: `dia_generate_speech`

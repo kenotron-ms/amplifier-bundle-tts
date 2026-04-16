@@ -1,4 +1,8 @@
-# Gemini TTS
+# Gemini TTS — All-Purpose Cloud TTS
+
+**Use this for:** presentations, reading text aloud, demos, narration, notifications, and
+any general content where you want high-quality speech fast — without a local model or GPU.
+30 curated prebuilt voices cover every tone from bright and upbeat to gravelly and warm.
 
 `gemini_generate_speech` generates speech via the **Google Gemini TTS cloud API**.
 Fast, no GPU required. Requires `GOOGLE_API_KEY` environment variable.

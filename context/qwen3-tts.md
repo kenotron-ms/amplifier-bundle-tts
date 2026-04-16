@@ -1,4 +1,8 @@
-# Qwen3-TTS
+# Qwen3-TTS — Creative TTS with Voice Design & Cloning
+
+**Use this for:** audiobooks, character narration, bespoke voice personas, and any creative work
+where you need precise control — either by describing the exact voice you want, or cloning one
+from a reference clip.
 
 Two tools backed by two model variants from Alibaba's Qwen3-TTS family.
 Both run locally — no API key, no server.

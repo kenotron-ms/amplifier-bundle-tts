@@ -1,7 +1,11 @@
 bundle:
   name: qwen3-tts-behavior
   version: 1.0.0
-  description: Adds qwen3_design_speech and qwen3_clone_speech via Qwen3-TTS (Alibaba)
+  description: >
+    Creative TTS with voice design & cloning — describe any voice in natural language,
+    or clone a voice identity from a short reference clip. Local inference, no API key.
+    Best for: audiobooks, character narration, bespoke voice personas, and any creative work
+    where you need precise control over how a voice sounds.
 
 tools:
   # Install: uv pip install -e ./modules/tool-qwen3-tts
