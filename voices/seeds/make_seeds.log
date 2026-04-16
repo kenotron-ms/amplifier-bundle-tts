@@ -1,0 +1,49 @@
+Device: mps  dtype: torch.float16
+/bin/sh: sox: command not found
+SoX could not be found!
+
+    If you do not have SoX, proceed here:
+     - - - http://sox.sourceforge.net/ - - -
+
+    If you do (or think that you should) have SoX, double-check your
+    path variables.
+    
+
+********
+Warning: flash-attn is not installed. Will only run the manual PyTorch version. Please install flash-attn for faster inference.
+********
+ 
+Loading Qwen3-TTS VoiceDesign...
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 91180.52it/s]
+Loaded.
+
+  [gen]  NARRATOR.wav
+         Male, 40s, low pitch, measured authoritative voice, slightly gravelly,...
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+  [ok]   NARRATOR.wav  (495 KB  10.6s)
+  [gen]  CHASE.wav
+         Male, early 30s, world-weary, moderate pitch, American, tired and resi...
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+  [ok]   CHASE.wav  (544 KB  11.6s)
+  [gen]  LIA.wav
+         Female, 30s, warm caring voice, moderate pitch, American, gentle firmn...
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+  [ok]   LIA.wav  (435 KB  9.3s)
+  [gen]  JACK.wav
+         Child, approximately 6 years old, young American boy, innocent and cur...
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+  [ok]   JACK.wav  (461 KB  9.8s)
+  [gen]  BLAZE.wav
+         Male, mid 40s, very deep voice, cold and controlled, American, each wo...
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+  [ok]   BLAZE.wav  (630 KB  13.4s)
+  [gen]  CRUM.wav
+         Male, young adult, high pitch, American, nervous energy, speaks too fa...
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+  [ok]   CRUM.wav  (521 KB  11.1s)
+  [gen]  GANG_MEMBER.wav
+         Male, mid 30s, low moderate pitch, American, flat professional tone, d...
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+  [ok]   GANG_MEMBER.wav  (488 KB  10.4s)
+
+All seeds complete.

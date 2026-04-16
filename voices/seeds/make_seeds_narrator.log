@@ -1,0 +1,31 @@
+Device: mps  dtype: torch.float16
+/bin/sh: sox: command not found
+SoX could not be found!
+
+    If you do not have SoX, proceed here:
+     - - - http://sox.sourceforge.net/ - - -
+
+    If you do (or think that you should) have SoX, double-check your
+    path variables.
+    
+
+********
+Warning: flash-attn is not installed. Will only run the manual PyTorch version. Please install flash-attn for faster inference.
+********
+ 
+Loading Qwen3-TTS VoiceDesign...
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 111107.39it/s]
+Loaded.
+
+  [gen]  NARRATOR.wav
+         Male, 40s, moderate-low pitch, gravelly but energetic, American, confi...
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+  [ok]   NARRATOR.wav  (656 KB  14.0s)
+  [skip] CHASE.wav
+  [skip] LIA.wav
+  [skip] JACK.wav
+  [skip] BLAZE.wav
+  [skip] CRUM.wav
+  [skip] GANG_MEMBER.wav
+
+All seeds complete.

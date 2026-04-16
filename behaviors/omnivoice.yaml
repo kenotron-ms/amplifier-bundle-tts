@@ -1,0 +1,14 @@
+bundle:
+  name: omnivoice-behavior
+  version: 0.3.0
+  description: Adds generate_speech, gemini_generate_speech, save_voice, and list_voices tools for TTS
+
+tools:
+  # source omitted — module is installed into the Amplifier env via:
+  #   uv pip install --python ~/.local/share/uv/tools/amplifier/bin/python \
+  #     -e ./modules/tool-omnivoice
+  - module: tool-omnivoice
+
+context:
+  include:
+    - omnivoice:context/omnivoice.md

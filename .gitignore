@@ -1,0 +1,15 @@
+.venv/
+    voices/*.wav
+    voices/*.mp3
+    voices/*.m4a
+    voices/*.flac
+    voices/library.json
+    audio_output/
+    audio/segments/
+    audio/segments_qwen/
+    __pycache__/
+    *.pyc
+    .DS_Store
+    .ruff_cache/
+    *.log
+    

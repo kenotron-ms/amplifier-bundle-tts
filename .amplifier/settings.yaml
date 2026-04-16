@@ -1,0 +1,10 @@
+# Project-scoped settings for the omnivoice bundle.
+# Only active when running `amplifier run` from this directory.
+#
+# NOTE: bundle.app lists REPLACE global ones (don't merge).
+# We intentionally omit bundle.app here so the global app bundles
+# (lifeos, m365, dev-machine, etc.) still load on top.
+bundle:
+  active: omnivoice
+  added:
+    omnivoice: file:///Users/ken/workspace/ms/omnivoice

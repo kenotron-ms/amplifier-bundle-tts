@@ -1,0 +1,12 @@
+# Installed & tested on Apple Silicon (MPS) with Python 3.13
+# torch + torchaudio installed first (no pinned version — picks latest stable):
+#   uv pip install torch torchaudio
+#
+# Then this file:
+#   uv pip install -r requirements.txt
+
+fastapi>=0.135.0
+uvicorn[standard]>=0.44.0
+python-multipart>=0.0.9
+numpy
+omnivoice>=0.1.3
