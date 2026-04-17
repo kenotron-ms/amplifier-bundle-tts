@@ -14,14 +14,8 @@ __pycache__/
 audio/
 audio_output/
 
-# Web UI runtime state
-voices/library.json
-
-# Voice files at root of voices/ — seeds in voices/seeds/ ARE tracked
-voices/*.wav
-voices/*.mp3
-voices/*.m4a
-voices/*.flac
+# Voice library — project-specific, not part of the bundle
+voices/
 
 # Arena evaluation WAV output dirs
 research/arena/chatterbox/
