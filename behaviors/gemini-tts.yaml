@@ -1,16 +1,17 @@
-bundle:
-  name: gemini-tts-behavior
-  version: 1.0.0
-  description: >
-    All-purpose cloud TTS — 30 expressive prebuilt voices covering every tone from
-    bright and upbeat to gravelly and warm. Instant generation, no GPU, no local model.
-    Best for: presentations, reading text aloud, demos, narration, notifications, and
-    any content where fast, flexible, high-quality speech matters more than custom voice control.
+    bundle:
+      name: gemini-tts-behavior
+      version: 1.0.0
+      description: >
+        All-purpose cloud TTS — 30 expressive prebuilt voices covering every tone from
+        bright and upbeat to gravelly and warm. Instant generation, no GPU, no local model.
+        Best for: presentations, reading text aloud, demos, narration, notifications, and
+        any content where fast, flexible, high-quality speech matters more than custom voice control.
 
-tools:
-  # Install: uv pip install -e ./modules/tool-gemini-tts
-  - module: tool-gemini-tts
+    tools:
+      - module: tool-gemini-tts
+        source: git+https://github.com/kenotron-ms/amplifier-bundle-tts@main#subdirectory=modules/tool-gemini-tts
 
-context:
-  include:
-    - omnivoice:context/gemini-tts.md
+    context:
+      include:
+        - text-to-speech:context/gemini-tts.md
+    

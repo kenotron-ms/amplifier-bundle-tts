@@ -1,16 +1,17 @@
-bundle:
-  name: qwen3-tts-behavior
-  version: 1.0.0
-  description: >
-    Creative TTS with voice design & cloning — describe any voice in natural language,
-    or clone a voice identity from a short reference clip. Local inference, no API key.
-    Best for: audiobooks, character narration, bespoke voice personas, and any creative work
-    where you need precise control over how a voice sounds.
+    bundle:
+      name: qwen3-tts-behavior
+      version: 1.0.0
+      description: >
+        Creative TTS with voice design & cloning — describe any voice in natural language,
+        or clone a voice identity from a short reference clip. Local inference, no API key.
+        Best for: audiobooks, character narration, bespoke voice personas, and any creative work
+        where you need precise control over how a voice sounds.
 
-tools:
-  # Install: uv pip install -e ./modules/tool-qwen3-tts
-  - module: tool-qwen3-tts
+    tools:
+      - module: tool-qwen3-tts
+        source: git+https://github.com/kenotron-ms/amplifier-bundle-tts@main#subdirectory=modules/tool-qwen3-tts
 
-context:
-  include:
-    - omnivoice:context/qwen3-tts.md
+    context:
+      include:
+        - text-to-speech:context/qwen3-tts.md
+    

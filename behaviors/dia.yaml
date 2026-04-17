@@ -1,15 +1,16 @@
-bundle:
-  name: dia-behavior
-  version: 1.0.0
-  description: >
-    Multi-speaker podcast & dialogue TTS — generates naturalistic two-voice
-    conversation with nonverbal sounds (laughs, sighs, coughs) in a single pass.
-    Best for: podcast episodes, interviews, explainer dialogue, two-character scenes.
+    bundle:
+      name: dia-behavior
+      version: 1.0.0
+      description: >
+        Multi-speaker podcast & dialogue TTS — generates naturalistic two-voice
+        conversation with nonverbal sounds (laughs, sighs, coughs) in a single pass.
+        Best for: podcast episodes, interviews, explainer dialogue, two-character scenes.
 
-tools:
-  # Install: uv pip install -e ./modules/tool-dia
-  - module: tool-dia
+    tools:
+      - module: tool-dia
+        source: git+https://github.com/kenotron-ms/amplifier-bundle-tts@main#subdirectory=modules/tool-dia
 
-context:
-  include:
-    - omnivoice:context/dia.md
+    context:
+      include:
+        - text-to-speech:context/dia.md
+    
