@@ -2,6 +2,7 @@
 mode:
   name: voice-scene
   description: Voice scene design mode — craft expressive Gemini TTS voice performances using the five-element scene structure. Distinct from visual/animation scene design.
+  shortcut: voice-scene
   tools:
     default_action: safe
 ---
