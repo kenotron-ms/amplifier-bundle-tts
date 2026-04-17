@@ -1,10 +1,8 @@
 ---
-skill:
-  name: voice-scene
-  version: 1.0.0
-  description: Design a Gemini TTS voice performance scene — interviews you on character, setting, and tone, builds the five-element scene brief, recommends a voice, and generates the audio.
-  context: fork
-  model_role: creative
+name: voice-scene
+description: Design a Gemini TTS voice performance scene — interviews you on character, setting, and tone, builds the five-element scene brief, recommends a voice, and generates the audio.
+context: fork
+model_role: creative
 ---
 
 # Voice Scene Design
