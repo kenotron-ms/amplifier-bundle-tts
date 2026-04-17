@@ -15,6 +15,10 @@ audio/
 audio_output/*
 !audio_output/.gitkeep
 
+# Generated scenes — track directory, ignore contents
+scenes/*
+!scenes/.gitkeep
+
 # Voice library — project-specific, not part of the bundle
 voices/
 
