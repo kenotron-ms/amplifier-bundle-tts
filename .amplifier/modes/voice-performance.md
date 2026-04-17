@@ -1,7 +1,7 @@
 ---
 mode:
-  name: scene-design
-  description: Sound scene design mode — guides you through crafting expressive Gemini TTS voice performances using the five-element scene structure.
+  name: voice-performance
+  description: Voice performance design mode — guides you through crafting expressive Gemini TTS scenes using the five-element structure (Audio Profile, Scene, Director's Notes, Context, Transcript). Distinct from visual/animation scene design.
   tools:
     default_action: safe
 ---
