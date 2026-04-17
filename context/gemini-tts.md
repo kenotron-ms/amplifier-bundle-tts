@@ -80,5 +80,5 @@ gemini_generate_speech(
 ## Notes
 
 - Requires `GOOGLE_API_KEY` — get one free at [aistudio.google.com](https://aistudio.google.com)
-- Auto-detects input language (60+ languages supported)
+- Auto-detects input language (78 languages supported)
 - Output: 24 kHz, 16-bit, mono WAV
