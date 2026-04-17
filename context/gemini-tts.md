@@ -35,7 +35,10 @@ gemini_generate_speech(
 )
 ```
 
-Inline tags are also supported: `[whispers]`, `[laughs]`, `[sighs]`, `[gasp]`, `[cough]`.
+Inline tags are also supported: `[whispers]`, `[laughs]`, `[sighs]`, `[gasp]`, `[cough]`,
+`[excited]`, `[shouting]`, `[tired]`, `[crying]`, `[amazed]`, `[curious]`, `[giggles]`,
+`[mischievously]`, `[panicked]`, `[sarcastic]`, `[serious]`, `[trembling]`.
+Tags are not exhaustive — experiment freely with any emotion or expression.
 
 ## Prebuilt Voices (30)
 
@@ -77,5 +80,5 @@ gemini_generate_speech(
 ## Notes
 
 - Requires `GOOGLE_API_KEY` — get one free at [aistudio.google.com](https://aistudio.google.com)
-- Auto-detects input language (24+ languages supported)
+- Auto-detects input language (60+ languages supported)
 - Output: 24 kHz, 16-bit, mono WAV

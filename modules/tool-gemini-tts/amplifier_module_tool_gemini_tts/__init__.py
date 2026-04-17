@@ -73,7 +73,10 @@ class GeminiGenerateSpeechTool:
             "30 expressive prebuilt voices. Fast, no GPU required. "
             "Supports single-speaker and multi-speaker (up to 2) modes. "
             "Style can be embedded in text or passed via the style parameter. "
-            "Inline tags like [whispers], [laughs], [sighs], [gasp], [cough] are supported. "
+            "Inline tags like [whispers], [laughs], [sighs], [gasp], [cough], [excited], "
+            "[shouting], [tired], [crying], [amazed], [curious], [giggles], [mischievously], "
+            "[panicked], [sarcastic], [serious], [trembling] are supported. "
+            "Tags are not exhaustive — experiment freely with any emotion or expression. "
             "Returns absolute path to the saved WAV file."
         )
 
@@ -206,11 +209,30 @@ class GeminiGenerateSpeechTool:
             )
             return response.candidates[0].content.parts[0].inline_data.data
 
+        # Gemini TTS occasionally returns text tokens instead of audio tokens,
+        # causing a 500 error. The docs recommend retry logic for this.
+        max_attempts = 3
         loop = asyncio.get_running_loop()
-        try:
-            pcm_data = await loop.run_in_executor(None, _sync)
-        except Exception as exc:
-            return ToolResult(success=False, output=f"Gemini TTS failed: {exc}")
+        last_exc: Exception | None = None
+        for attempt in range(1, max_attempts + 1):
+            try:
+                pcm_data = await loop.run_in_executor(None, _sync)
+                break
+            except Exception as exc:
+                last_exc = exc
+                if attempt < max_attempts:
+                    logger.warning(
+                        "Gemini TTS attempt %d/%d failed: %s — retrying",
+                        attempt,
+                        max_attempts,
+                        exc,
+                    )
+                    await asyncio.sleep(1.0 * attempt)
+        else:
+            return ToolResult(
+                success=False,
+                output=f"Gemini TTS failed after {max_attempts} attempts: {last_exc}",
+            )
 
         # Gemini returns 24 kHz, 16-bit, mono PCM
         output_path.parent.mkdir(parents=True, exist_ok=True)
