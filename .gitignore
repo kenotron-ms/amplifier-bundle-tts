@@ -10,9 +10,10 @@ __pycache__/
 # Logs
 *.log
 
-# Generated audio (all runtime artifacts)
+# Generated audio — track directory, ignore contents
 audio/
-audio_output/
+audio_output/*
+!audio_output/.gitkeep
 
 # Voice library — project-specific, not part of the bundle
 voices/
