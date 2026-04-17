@@ -5,6 +5,7 @@
 # We intentionally omit bundle.app here so the global app bundles
 # (lifeos, m365, dev-machine, etc.) still load on top.
 bundle:
-  active: omnivoice
+  active: text-to-speech-dev
   added:
-    omnivoice: file:///Users/ken/workspace/ms/omnivoice
+    text-to-speech: ./bundle.md
+    text-to-speech-dev: ./.amplifier/text-to-speech-dev.md
