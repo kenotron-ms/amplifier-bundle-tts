@@ -40,6 +40,94 @@ Inline tags are also supported: `[whispers]`, `[laughs]`, `[sighs]`, `[gasp]`, `
 `[mischievously]`, `[panicked]`, `[sarcastic]`, `[serious]`, `[trembling]`.
 Tags are not exhaustive — experiment freely with any emotion or expression.
 
+## Advanced Prompting — Build a Full Scene
+
+For maximum expressiveness, go beyond a simple style hint and give the model a full performance brief.
+Think of it as a director's packet for a voice actor. The model reads the whole thing and uses it
+to make subtle, coherent choices about delivery — even in parts you haven't tagged explicitly.
+
+### The Five Elements
+
+| Element | What it does |
+|---------|-------------|
+| **Audio Profile** | Names the character and anchors their identity |
+| **Scene** | Sets the physical and emotional environment |
+| **Director's Notes** | Gives specific style, pacing, and accent guidance |
+| **Sample Context** | Tells the model *why* the character is speaking (backstory, stakes) |
+| **Transcript** | The actual words, with optional inline `[tags]` |
+
+You don't need all five every time — Director's Notes alone goes a long way.
+But the more coherent the brief, the more natural and consistent the result.
+
+### Template
+
+```
+# AUDIO PROFILE: [Character name]
+## "[Character tagline or role]"
+
+## THE SCENE: [Location name]
+[2–4 sentences. Describe the physical space, the time of day, the mood.
+What is happening around the character? How does the environment affect them?]
+
+### DIRECTOR'S NOTES
+Style: [Tone and emotional vibe — be specific. "Infectious enthusiasm" beats "energetic".]
+Pacing: [Fast/slow/variable — describe rhythm, not just speed.]
+Accent: [Be precise. "South London, Brixton" beats "British".]
+
+### SAMPLE CONTEXT
+[1–3 sentences. Why is the character speaking right now? What are the stakes?
+What do they want the listener to feel?]
+
+#### TRANSCRIPT
+[The words. Use inline tags like [whispers] or [shouting] for specific moments.]
+```
+
+### Worked Example
+
+```
+# AUDIO PROFILE: Dr. Mira S.
+## "The Late-Night Lab"
+
+## THE SCENE: Basement Research Lab, 2:47 AM
+Flickering fluorescent lights hum over a cluttered bench. Coffee cups ring-stain
+a stack of printed papers. Dr. Mira has been awake for nineteen hours and just
+watched the assay results come back — positive, against all probability.
+The lab is empty. She is talking to a recorder, not a person.
+
+### DIRECTOR'S NOTES
+Style: Measured disbelief tipping into quiet elation. She is too tired and too
+careful to celebrate out loud, but the wonder keeps breaking through.
+Pacing: Slow and deliberate at first, then picking up speed mid-paragraph as
+the implications land. Brief pauses after key words.
+Accent: Standard American academic — no strong regional markers.
+
+### SAMPLE CONTEXT
+This is a personal log entry. Dr. Mira is recording her thoughts before she
+lets herself believe what she is seeing. She does not want to jinx it.
+
+#### TRANSCRIPT
+[sighs] Okay. So. [pause] The results are in and I'm... I don't want to say it yet.
+[whispers] It worked. [normal voice] Three years of dead ends and it actually —
+[laughs softly] I should call someone. I'm not going to call anyone. Not until
+I run it twice more. But [excited] oh, this is something.
+```
+
+When you pass a scene like this to `gemini_generate_speech`, put the entire block in `text`
+and leave `style` empty — the model reads the full brief:
+
+```python
+gemini_generate_speech(
+    text=SCENE_PROMPT,   # the full multi-section block above
+    voice="Achernar",    # Soft — matches the exhausted-but-elated register
+    model="gemini-2.5-pro-preview-tts",  # use Pro for complex scene work
+    output_path="mira_log.wav",
+)
+```
+
+> **Tip:** Match your voice choice to the scene. A Breathy or Soft voice fits
+> intimacy and exhaustion; an Upbeat or Bright voice fits energy and excitement.
+> The voice and the brief reinforce each other.
+
 ## Prebuilt Voices (30)
 
 | Voice | Style | Voice | Style | Voice | Style |
