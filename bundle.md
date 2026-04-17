@@ -8,4 +8,8 @@ includes:
   - bundle: text-to-speech:behaviors/dia
   - bundle: text-to-speech:behaviors/qwen3-tts
   - bundle: text-to-speech:behaviors/gemini-tts
+
+context:
+  include:
+    - text-to-speech:context/omnivoice-awareness.md
 ---
